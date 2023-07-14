@@ -10,7 +10,7 @@ public partial struct ConnectionStateJob : IJobEntity
     [ReadOnly]
     public ComponentLookup<PlayerComponent> PlayerComponentLookup;
 
-    public void Execute(Entity reqEntity, ref ConnectionState connectionState, ref DynamicBuffer<LinkedEntityGroup> linkedEntityGroup)
+    public void Execute(Entity reqEntity, ConnectionState connectionState, ref DynamicBuffer<LinkedEntityGroup> linkedEntityGroup)
     {
         if (connectionState.CurrentState == ConnectionState.State.Disconnected)
         {

@@ -25,7 +25,7 @@ public partial class PlayerInputSystem : SystemBase, DefaultControlMap.IPlayerAc
     {
         PhysicsWorldSingleton physicsWorld = SystemAPI.GetSingleton<PhysicsWorldSingleton>();
 
-        new PlayerInputJob
+        new CheckPlayerGroundJob
         {
             PhysicsWorld = physicsWorld
         }.Schedule();
